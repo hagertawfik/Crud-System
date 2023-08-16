@@ -1,0 +1,73 @@
+<html>
+
+<head>
+    <title>crud System</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Product Managment System</h2>
+    <form >
+
+        <div class="my-4">
+            <label for="ProductName">Product Name:</label>
+            <input id="ProductName" type="text" class="form-control" >
+            <div class="alert alert-danger d-none" id="ProductNamevaild">
+                <p>please Enter one UpperCase letter at the start</p>
+            </div>
+        </div>
+        <div class="my-4">
+            <label for="ProductPrice">Product Price:</label>
+            <input id="ProductPrice" type="number" class="form-control" >
+            <div class="alert alert-danger d-none" id="ProductPricevaild">
+                <p>please Enter correct price</p>
+            </div>
+        </div>
+        <div class="my-4">
+            <label for="ProductCategory">Product Category:</label>
+          <select name="category" id="ProductCategory" class="form-select">
+            <option value="computer">computer</option>
+            <option value="laptop">laptop</option>
+            <option value="tv">tv</option>
+            <option value="mobile">mobile</option>
+            <option value="tablet">tablet</option>
+          </select>
+        </div>
+        <div class="my-4">
+            <label for="ProductDescrption">Product Descrption:</label>
+            <textarea id="ProductDescrption"  class="form-control" ></textarea>
+            <div class="alert alert-danger d-none" id="ProductDescrptionvaild">
+                <p>please Enter your feedback</p>
+            </div>
+        </div>
+        <button id="addproduct" type="button" class="btn btn-outline-info d-inline-block ">add product</button>
+        <button id="addEdit" type="button" class="btn btn-outline-info d-none ">add Edit</button>
+        <button id="clearform" type="button" class="btn btn-outline-danger ">clear form</button>
+    </form>
+    <div class="my-4">
+    
+        <input  placeholder="search....." type="search" id="searchin"   class="form-control w-50 mx-auto my-5" ></input>
+       
+    </div>
+    <table class="table table-bordered table-striped">
+      <thead>
+        <th>index</th>
+        <th>ProductName</th>
+        <th>ProductPrice</th>
+        <th>ProductCategory</th>
+        <th>ProductDescrption</th>
+        <th>Update</th>
+        <th>delete</th>
+      </thead>
+      <tbody id="tablebody">
+       
+      </tbody>
+      </table>
+</div>
+
+<script src="js/index.js"></script>
+</body>
+
+</html>
